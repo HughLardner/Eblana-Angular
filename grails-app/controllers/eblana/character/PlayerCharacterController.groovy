@@ -1,6 +1,5 @@
 package eblana.character
 
-
 import grails.converters.*
 import grails.plugin.springsecurity.annotation.Secured
 import grails.rest.*
