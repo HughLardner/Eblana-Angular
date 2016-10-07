@@ -1,0 +1,7 @@
+import eblana.character.PlayerCharacter
+
+model {
+	PlayerCharacter playerCharacter
+}
+
+json tmpl.playerCharacter(playerCharacter)

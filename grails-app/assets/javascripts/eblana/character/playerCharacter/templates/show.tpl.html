@@ -1,0 +1,30 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a ui-sref="index" class="home">Home</a></li>
+        <li><a class="list" ui-sref="playerCharacter.list" class="list">PlayerCharacter List</a></li>
+        <li><a class="create" ui-sref="playerCharacter.create" class="create">New PlayerCharacter</a></li>
+    </ul>
+</div>
+<div id="show-part" class="content scaffold-show" role="main">
+    <h1>Show PlayerCharacter</h1>
+    <ol class="property-list playerCharacter">
+  <li class="fieldcontain">
+    <span id="alive-label" class="property-label">Alive</span>
+    <div class="property-value" aria-labelledby="alive-label">
+      <span>{{vm.playerCharacter.alive}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="name-label" class="property-label">Name</span>
+    <div class="property-value" aria-labelledby="name-label">
+      <span>{{vm.playerCharacter.name}}</span>
+    </div>
+  </li>
+</ol>
+    <form ng-submit="vm.delete()">
+        <fieldset class="buttons">
+            <a class="edit" ui-sref="playerCharacter.edit({id: vm.playerCharacter.id})">Edit</a>
+            <input class="delete" type="submit" value="Delete" onclick="return confirm('Are you sure?');" />
+        </fieldset>
+    </form>
+</div>

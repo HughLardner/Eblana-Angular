@@ -1,0 +1,13 @@
+import eblana.character.PlayerCharacter
+
+model {
+	PlayerCharacter playerCharacter
+}
+
+json {
+        hal.links(playerCharacter)
+        id playerCharacter.id
+        name playerCharacter.name
+        alive playerCharacter.alive
+}
+

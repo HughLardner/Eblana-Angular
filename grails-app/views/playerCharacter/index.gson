@@ -1,0 +1,8 @@
+import eblana.character.PlayerCharacter
+
+model {
+	Iterable<PlayerCharacter> playerCharacterList
+}
+
+json tmpl.playerCharacter(playerCharacterList ?: [])
+
