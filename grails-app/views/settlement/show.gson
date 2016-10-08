@@ -1,0 +1,7 @@
+import eblana.background.Settlement
+
+model {
+	Settlement settlement
+}
+
+json tmpl.settlement(settlement)

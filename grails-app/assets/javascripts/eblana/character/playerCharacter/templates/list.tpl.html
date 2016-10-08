@@ -10,8 +10,12 @@
   <thead>
     <tr>
       <th>Id</th>
+      <th>Spell</th>
+      <th>Item</th>
       <th>Alive</th>
-      <th>Name</th>
+      <th>Lore</th>
+      <th>Level</th>
+      <th>Classes</th>
     </tr>
   </thead>
   <tbody>
@@ -20,10 +24,38 @@
         <a ui-sref="playerCharacter.show({id: playerCharacter.id})">{{playerCharacter.id}}</a>
       </td>
       <td>
+        <ul>
+          <li ng-repeat="characterSpell in playerCharacter.spell">
+            <a ui-sref="characterSpell.show({id: characterSpell.id})">{{characterSpell.toString()}}</a>
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li ng-repeat="item in playerCharacter.item">
+            <a ui-sref="item.show({id: item.id})">{{item.toString()}}</a>
+          </li>
+        </ul>
+      </td>
+      <td>
         <span>{{playerCharacter.alive}}</span>
       </td>
       <td>
-        <span>{{playerCharacter.name}}</span>
+        <ul>
+          <li ng-repeat="lore in playerCharacter.lore">
+            <a ui-sref="lore.show({id: lore.id})">{{lore.toString()}}</a>
+          </li>
+        </ul>
+      </td>
+      <td>
+        <span>{{playerCharacter.level}}</span>
+      </td>
+      <td>
+        <ul>
+          <li ng-repeat="classes in playerCharacter.classes">
+            <a ui-sref="classes.show({id: classes.id})">{{classes.toString()}}</a>
+          </li>
+        </ul>
       </td>
     </tr>
   </tbody>

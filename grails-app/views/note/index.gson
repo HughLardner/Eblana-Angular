@@ -1,0 +1,8 @@
+import eblana.logistic.Note
+
+model {
+	Iterable<Note> noteList
+}
+
+json tmpl.note(noteList ?: [])
+

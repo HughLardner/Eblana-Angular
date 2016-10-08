@@ -1,0 +1,7 @@
+import eblana.character.Spell
+
+model {
+	Spell spell
+}
+
+json tmpl.spell(spell)

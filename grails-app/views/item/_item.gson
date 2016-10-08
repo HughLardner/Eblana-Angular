@@ -1,0 +1,7 @@
+import eblana.items.Item
+
+model {
+	Item item
+}
+
+json g.render(item)

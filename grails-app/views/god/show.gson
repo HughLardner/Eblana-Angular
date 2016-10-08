@@ -1,0 +1,7 @@
+import eblana.background.God
+
+model {
+	God god
+}
+
+json tmpl.god(god)

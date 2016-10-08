@@ -1,0 +1,7 @@
+import eblana.items.ItemType
+
+model {
+	ItemType itemType
+}
+
+json g.render(itemType)

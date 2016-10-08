@@ -1,0 +1,8 @@
+import eblana.users.SecUser
+
+model {
+	Iterable<SecUser> secUserList
+}
+
+json tmpl.secUser(secUserList ?: [])
+

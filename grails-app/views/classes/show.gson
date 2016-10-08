@@ -1,0 +1,7 @@
+import eblana.character.Classes
+
+model {
+	Classes classes
+}
+
+json tmpl.classes(classes)

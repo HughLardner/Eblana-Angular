@@ -1,0 +1,8 @@
+import eblana.character.Effect
+
+model {
+	Iterable<Effect> effectList
+}
+
+json tmpl.effect(effectList ?: [])
+

@@ -1,0 +1,7 @@
+import eblana.event.TransferLog
+
+model {
+	TransferLog transferLog
+}
+
+json tmpl.transferLog(transferLog)

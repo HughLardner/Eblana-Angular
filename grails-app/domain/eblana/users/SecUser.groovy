@@ -1,5 +1,6 @@
 package eblana.users
 
+import eblana.character.PlayerCharacter
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
@@ -17,6 +18,20 @@ class SecUser implements Serializable {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+	
+	String firstName, surname, phoneNumber, email
+	String emergancyContact, emergancyContactNumber, medicalInformation, carReg
+	
+	static hasMany = [character : PlayerCharacter]
+	
+	@Override
+	String toString() {
+		if(firstName || surname){
+			return "${firstName?:''} ${surname?:''}"
+		}else{
+			return username
+		}
+	}
 
 	SecUser(String username, String password) {
 		this()

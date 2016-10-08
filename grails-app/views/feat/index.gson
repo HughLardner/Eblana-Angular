@@ -1,0 +1,8 @@
+import eblana.character.Feat
+
+model {
+	Iterable<Feat> featList
+}
+
+json tmpl.feat(featList ?: [])
+

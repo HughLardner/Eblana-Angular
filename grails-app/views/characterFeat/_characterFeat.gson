@@ -1,0 +1,11 @@
+import eblana.character.CharacterFeat
+
+model {
+	CharacterFeat characterFeat
+}
+
+json {
+	hal.links(characterFeat)
+	id characterFeat.id
+	g.render(characterFeat.feat)
+}

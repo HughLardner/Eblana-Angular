@@ -1,0 +1,8 @@
+import eblana.items.Recipe
+
+model {
+	Iterable<Recipe> recipeList
+}
+
+json tmpl.recipe(recipeList ?: [])
+

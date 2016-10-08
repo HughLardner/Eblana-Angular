@@ -1,0 +1,7 @@
+import eblana.character.CharacterSpell
+
+model {
+	CharacterSpell characterSpell
+}
+
+json g.render(characterSpell)

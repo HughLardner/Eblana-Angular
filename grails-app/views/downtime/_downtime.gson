@@ -1,0 +1,7 @@
+import eblana.event.Downtime
+
+model {
+	Downtime downtime
+}
+
+json g.render(downtime)

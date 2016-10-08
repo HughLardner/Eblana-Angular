@@ -1,0 +1,7 @@
+import eblana.users.SecUserSecRole
+
+model {
+	SecUserSecRole secUserSecRole
+}
+
+json tmpl.secUserSecRole(secUserSecRole)

@@ -1,0 +1,8 @@
+import eblana.character.CharacterSpell
+
+model {
+	Iterable<CharacterSpell> characterSpellList
+}
+
+json tmpl.characterSpell(characterSpellList ?: [])
+

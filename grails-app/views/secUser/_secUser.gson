@@ -1,0 +1,7 @@
+import eblana.users.SecUser
+
+model {
+	SecUser secUser
+}
+
+json g.render(secUser)

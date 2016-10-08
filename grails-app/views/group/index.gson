@@ -1,0 +1,8 @@
+import eblana.background.Group
+
+model {
+	Iterable<Group> groupList
+}
+
+json tmpl.group(groupList ?: [])
+

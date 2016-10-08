@@ -1,0 +1,8 @@
+import eblana.character.Classes
+
+model {
+	Iterable<Classes> classesList
+}
+
+json tmpl.classes(classesList ?: [])
+

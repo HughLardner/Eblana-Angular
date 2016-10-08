@@ -1,0 +1,8 @@
+import eblana.event.Downtime
+
+model {
+	Iterable<Downtime> downtimeList
+}
+
+json tmpl.downtime(downtimeList ?: [])
+

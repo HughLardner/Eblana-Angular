@@ -1,0 +1,7 @@
+import eblana.event.EventLore
+
+model {
+	EventLore eventLore
+}
+
+json tmpl.eventLore(eventLore)

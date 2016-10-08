@@ -1,0 +1,7 @@
+import eblana.character.Lore
+
+model {
+	Lore lore
+}
+
+json tmpl.lore(lore)

@@ -1,0 +1,7 @@
+import eblana.users.SecRole
+
+model {
+	SecRole secRole
+}
+
+json g.render(secRole)

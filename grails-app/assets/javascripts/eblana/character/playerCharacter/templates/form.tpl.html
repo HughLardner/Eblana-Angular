@@ -1,12 +1,66 @@
 <fieldset class="form">
   <div class="fieldcontain">
+    <label for="spell">Spell</label>
+    <a ui-sref="characterSpell.create({characterId: vm.playerCharacter.id})">Add CharacterSpell</a>
+  </div>
+  <div class="fieldcontain">
+    <label for="item">Item</label>
+    <select name="item" id="item" ng-model="vm.playerCharacter.item" ng-options="item for item in vm.itemList track by item.id" multiple=""></select>
+  </div>
+  <div class="fieldcontain">
     <label for="alive">Alive</label>
     <input name="alive" id="alive" ng-model="vm.playerCharacter.alive" ng-init="vm.playerCharacter.alive = false" type="checkbox" />
   </div>
-  <div class="fieldcontain required">
-    <label for="name">Name
-      <span class="required-indicator">*</span>
-    </label>
-    <input required="" name="name" id="name" ng-model="vm.playerCharacter.name" type="text" />
+  <div class="fieldcontain">
+    <label for="lore">Lore</label>
+    <select name="lore" id="lore" ng-model="vm.playerCharacter.lore" ng-options="lore for lore in vm.loreList track by lore.id" multiple=""></select>
+  </div>
+  <div class="fieldcontain">
+    <label for="level">Level</label>
+    <input name="level" id="level" ng-model="vm.playerCharacter.level" type="number" />
+  </div>
+  <div class="fieldcontain">
+    <label for="classes">Classes</label>
+    <select name="classes" id="classes" ng-model="vm.playerCharacter.classes" ng-options="classes for classes in vm.classesList track by classes.id" multiple=""></select>
+  </div>
+  <div class="fieldcontain">
+    <label for="recipe">Recipe</label>
+    <select name="recipe" id="recipe" ng-model="vm.playerCharacter.recipe" ng-options="recipe for recipe in vm.recipeList track by recipe.id" multiple=""></select>
+  </div>
+  <div class="fieldcontain">
+    <label for="settlement">Settlement</label>
+    <select name="settlement" id="settlement" ng-model="vm.playerCharacter.settlement" ng-options="settlement for settlement in vm.settlementList track by settlement.id"></select>
+  </div>
+  <div class="fieldcontain">
+    <label for="downtime">Downtime</label>
+    <a ui-sref="downtime.create({characterId: vm.playerCharacter.id})">Add Downtime</a>
+  </div>
+  <div class="fieldcontain">
+    <label for="species">Species</label>
+    <select name="species" id="species" ng-model="vm.playerCharacter.species" ng-options="species for species in vm.speciesList track by species.id"></select>
+  </div>
+  <div class="fieldcontain">
+    <label for="background">Background</label>
+    <input name="background" id="background" ng-model="vm.playerCharacter.background" type="text" />
+  </div>
+  <div class="fieldcontain">
+    <label for="name">Name</label>
+    <input name="name" id="name" ng-model="vm.playerCharacter.name" type="text" />
+  </div>
+  <div class="fieldcontain">
+    <label for="feat">Feat</label>
+    <a ui-sref="characterFeat.create({characterId: vm.playerCharacter.id})">Add CharacterFeat</a>
+  </div>
+  <div class="fieldcontain">
+    <label for="user">User</label>
+    <select name="user" id="user" ng-model="vm.playerCharacter.user" ng-options="secUser for secUser in vm.secUserList track by secUser.id"></select>
+  </div>
+  <div class="fieldcontain">
+    <label for="god">God</label>
+    <select name="god" id="god" ng-model="vm.playerCharacter.god" ng-options="god for god in vm.godList track by god.id"></select>
+  </div>
+  <div class="fieldcontain">
+    <label for="group">Group</label>
+    <select name="group" id="group" ng-model="vm.playerCharacter.group" ng-options="group for group in vm.groupList track by group.id"></select>
   </div>
 </fieldset>

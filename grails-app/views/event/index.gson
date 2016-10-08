@@ -1,0 +1,8 @@
+import eblana.event.Event
+
+model {
+	Iterable<Event> eventList
+}
+
+json tmpl.event(eventList ?: [])
+

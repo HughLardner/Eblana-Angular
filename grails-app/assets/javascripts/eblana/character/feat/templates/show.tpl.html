@@ -1,0 +1,102 @@
+<div class="nav" role="navigation">
+    <ul>
+        <li><a ui-sref="index" class="home">Home</a></li>
+        <li><a class="list" ui-sref="feat.list" class="list">Feat List</a></li>
+        <li><a class="create" ui-sref="feat.create" class="create">New Feat</a></li>
+    </ul>
+</div>
+<div id="show-part" class="content scaffold-show" role="main">
+    <h1>Show Feat</h1>
+    <ol class="property-list feat">
+  <li class="fieldcontain">
+    <span id="prereqSpecies-label" class="property-label">Prereq Species</span>
+    <div class="property-value" aria-labelledby="prereqSpecies-label">
+      <a ui-sref="species.show({id: vm.feat.prereqSpecies.id})">{{vm.feat.prereqSpecies.toString()}}</a>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="level-label" class="property-label">Level</span>
+    <div class="property-value" aria-labelledby="level-label">
+      <span>{{vm.feat.level}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="sustainable-label" class="property-label">Sustainable</span>
+    <div class="property-value" aria-labelledby="sustainable-label">
+      <span>{{vm.feat.sustainable}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="prereqFeat-label" class="property-label">Prereq Feat</span>
+    <div class="property-value" aria-labelledby="prereqFeat-label">
+      <a ui-sref="feat.show({id: vm.feat.prereqFeat.id})">{{vm.feat.prereqFeat.toString()}}</a>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="visiable-label" class="property-label">Visiable</span>
+    <div class="property-value" aria-labelledby="visiable-label">
+      <span>{{vm.feat.visiable}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="description-label" class="property-label">Description</span>
+    <div class="property-value" aria-labelledby="description-label">
+      <span>{{vm.feat.description}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="prereqClass-label" class="property-label">Prereq Class</span>
+    <div class="property-value" aria-labelledby="prereqClass-label">
+      <a ui-sref="classes.show({id: vm.feat.prereqClass.id})">{{vm.feat.prereqClass.toString()}}</a>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="type-label" class="property-label">Type</span>
+    <div class="property-value" aria-labelledby="type-label">
+      <span>{{vm.feat.type}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="body-label" class="property-label">Body</span>
+    <div class="property-value" aria-labelledby="body-label">
+      <span>{{vm.feat.body}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="itemsCrafted-label" class="property-label">Items Crafted</span>
+    <div class="property-value" aria-labelledby="itemsCrafted-label">
+      <span>{{vm.feat.itemsCrafted}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="armour-label" class="property-label">Armour</span>
+    <div class="property-value" aria-labelledby="armour-label">
+      <span>{{vm.feat.armour}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="mana-label" class="property-label">Mana</span>
+    <div class="property-value" aria-labelledby="mana-label">
+      <span>{{vm.feat.mana}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="name-label" class="property-label">Name</span>
+    <div class="property-value" aria-labelledby="name-label">
+      <span>{{vm.feat.name}}</span>
+    </div>
+  </li>
+  <li class="fieldcontain">
+    <span id="takeMoreThenOnce-label" class="property-label">Take More Then Once</span>
+    <div class="property-value" aria-labelledby="takeMoreThenOnce-label">
+      <span>{{vm.feat.takeMoreThenOnce}}</span>
+    </div>
+  </li>
+</ol>
+    <form ng-submit="vm.delete()">
+        <fieldset class="buttons">
+            <a class="edit" ui-sref="feat.edit({id: vm.feat.id})">Edit</a>
+            <input class="delete" type="submit" value="Delete" onclick="return confirm('Are you sure?');" />
+        </fieldset>
+    </form>
+</div>

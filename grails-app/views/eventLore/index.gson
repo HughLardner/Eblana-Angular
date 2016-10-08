@@ -1,0 +1,8 @@
+import eblana.event.EventLore
+
+model {
+	Iterable<EventLore> eventLoreList
+}
+
+json tmpl.eventLore(eventLoreList ?: [])
+

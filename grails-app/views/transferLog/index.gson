@@ -1,0 +1,8 @@
+import eblana.event.TransferLog
+
+model {
+	Iterable<TransferLog> transferLogList
+}
+
+json tmpl.transferLog(transferLogList ?: [])
+

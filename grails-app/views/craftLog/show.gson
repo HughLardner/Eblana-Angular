@@ -1,0 +1,7 @@
+import eblana.event.CraftLog
+
+model {
+	CraftLog craftLog
+}
+
+json tmpl.craftLog(craftLog)

@@ -1,0 +1,7 @@
+import eblana.character.Feat
+
+model {
+	Feat feat
+}
+
+json g.render(feat)

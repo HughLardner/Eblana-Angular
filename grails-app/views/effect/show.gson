@@ -1,0 +1,7 @@
+import eblana.character.Effect
+
+model {
+	Effect effect
+}
+
+json tmpl.effect(effect)
