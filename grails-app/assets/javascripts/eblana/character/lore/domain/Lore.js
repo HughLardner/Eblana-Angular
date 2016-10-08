@@ -17,7 +17,7 @@ function Lore($resource) {
     Lore.list = Lore.query;
 
     Lore.prototype.toString = function() {
-        return 'eblana.character.Lore : ' + (this.id ? this.id : '(unsaved)');
+        return (this ? this.name : '(unsaved)');
     };
 
     return Lore;

@@ -17,7 +17,7 @@ function SecUser($resource) {
     SecUser.list = SecUser.query;
 
     SecUser.prototype.toString = function() {
-        return 'eblana.users.SecUser : ' + (this.id ? this.id : '(unsaved)');
+        return (this ? this.name : '');
     };
 
     return SecUser;

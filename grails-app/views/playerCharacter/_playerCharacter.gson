@@ -7,15 +7,16 @@ model {
 json {
 	hal.links(playerCharacter)
 	id playerCharacter.id
-	user tmpl.'../secUser/secUser'(playerCharacter.user)
+	user tmpl.'../secUser/secUserMin'(secUser:playerCharacter.user)
 	name playerCharacter.name
 	species playerCharacter.species.toString()
 	body playerCharacter.body
 	armour playerCharacter.armour
 	mana playerCharacter.mana
 	xp playerCharacter.xp
-	classes playerCharacter.classes.toString()
+	classes tmpl.'../classes/classes'(playerCharacter.classes)
 	feat tmpl.'../characterFeat/characterFeat'(playerCharacter.feat)
 	spells tmpl.'../characterSpell/characterSpell'(playerCharacter.spell)
-	lores playerCharacter.lore.toString()
+	lore tmpl.'../lore/lore'(playerCharacter.lore)
+	alive playerCharacter.alive
 }

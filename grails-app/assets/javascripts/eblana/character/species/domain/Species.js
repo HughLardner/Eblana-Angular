@@ -17,7 +17,7 @@ function Species($resource) {
     Species.list = Species.query;
 
     Species.prototype.toString = function() {
-        return 'eblana.character.Species : ' + (this.id ? this.id : '(unsaved)');
+        return (this ? this.name : '');
     };
 
     return Species;

@@ -17,7 +17,7 @@ function CharacterFeat($resource) {
     CharacterFeat.list = CharacterFeat.query;
 
     CharacterFeat.prototype.toString = function() {
-        return 'eblana.character.CharacterFeat : ' + (this.id ? this.id : '(unsaved)');
+        return ((this.feat? this.feat.name : '') + (this.effect?'<' + this.effect.name + '>':''));
     };
 
     return CharacterFeat;

@@ -5,7 +5,7 @@ model {
 }
 
 json {
-	hal.links(characterFeat)
 	id characterFeat.id
-	g.render(characterFeat.feat)
+	feat g.render(characterFeat.feat)
+	effect g.render(characterFeat.effect)
 }

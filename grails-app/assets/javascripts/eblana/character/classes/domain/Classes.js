@@ -17,7 +17,7 @@ function Classes($resource) {
     Classes.list = Classes.query;
 
     Classes.prototype.toString = function() {
-        return 'eblana.character.Classes : ' + (this.id ? this.id : '(unsaved)');
+        return (this ? this.name + ' ' + this.level : '');
     };
 
     return Classes;

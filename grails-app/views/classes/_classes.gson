@@ -4,4 +4,8 @@ model {
 	Classes classes
 }
 
-json g.render(classes)
+json {
+	id classes.id
+	name classes.name
+	level classes.level
+}
