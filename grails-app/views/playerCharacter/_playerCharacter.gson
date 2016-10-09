@@ -9,14 +9,14 @@ json {
 	id playerCharacter.id
 	user tmpl.'../secUser/secUserMin'(secUser:playerCharacter.user)
 	name playerCharacter.name
-	species playerCharacter.species.toString()
+	species tmpl.'../species/species'(playerCharacter.species)
 	body playerCharacter.body
 	armour playerCharacter.armour
 	mana playerCharacter.mana
 	xp playerCharacter.xp
 	classes tmpl.'../classes/classes'(playerCharacter.classes)
 	feat tmpl.'../characterFeat/characterFeat'(playerCharacter.feat)
-	spells tmpl.'../characterSpell/characterSpell'(playerCharacter.spell)
+	spell tmpl.'../characterSpell/characterSpell'(playerCharacter.spell)
 	lore tmpl.'../lore/lore'(playerCharacter.lore)
 	alive playerCharacter.alive
 }

@@ -1,25 +1,14 @@
 //= wrapped
 
+function PlayerCharacterController() {
+}
+
 angular
     .module("eblana.character.playerCharacter")
-    .directive("playerCharacter", playerCharacter);
-
-function playerCharacter() {
-    var directive = {
-        restrict: "E",
+    .component("playerCharacter", {   	  
         templateUrl: "/eblana/character/playerCharacter/playerCharacter.html",
-        controller: PlayerCharacterController,
-        controllerAs: "vm",
-        transclude: true,
-        scope: {},
-        bindToController: {
+        bindings:{
+        	vm:'<'
         }
-    };
+    });
 
-    return directive;
-
-    /*@ngInject*/
-    function PlayerCharacterController() {
-
-    }
-}

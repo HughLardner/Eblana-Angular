@@ -17,7 +17,7 @@ function CharacterSpell($resource) {
     CharacterSpell.list = CharacterSpell.query;
 
     CharacterSpell.prototype.toString = function() {
-        return 'eblana.character.CharacterSpell : ' + (this.id ? this.id : '(unsaved)');
+        return this ? (this.spell.name + ( this.effect1?'<'+this.effect1.effect+'>':'')+ ( this.effect2?'<'+this.effect2.effect+'>':'') ) : '';
     };
 
     return CharacterSpell;

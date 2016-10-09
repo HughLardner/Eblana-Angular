@@ -1,0 +1,12 @@
+import eblana.character.Spell
+
+model {
+	Spell spell
+}
+
+json {
+	id spell.id
+	name spell.toString()
+	effect tmpl.'../effect/effectMin'(effect:spell.effect)
+	level spell.classes.level
+}

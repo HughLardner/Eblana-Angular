@@ -4,4 +4,10 @@ model {
 	CharacterSpell characterSpell
 }
 
-json g.render(characterSpell)
+json {
+	id characterSpell.id
+	spell tmpl.'../spell/spellMin'(spell:characterSpell.spell)
+	effect1 characterSpell.effect1?tmpl.'../effect/effectMin'(effect:characterSpell.effect1):null
+	effect2 characterSpell.effect2?tmpl.'../effect/effectMin'(effect:characterSpell.effect2):null
+	
+}

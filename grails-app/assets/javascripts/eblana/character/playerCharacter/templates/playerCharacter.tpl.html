@@ -1,0 +1,62 @@
+
+<div class="row row-eq-height">
+	<div class="col-xs-4 bordered">
+		<span id="name-label" class="property-label">Player:</span> <span>{{$ctrl.vm.playerCharacter.user.toString()}}</span>
+	</div>
+	<div class="col-xs-4 bordered">
+		<span id="name-label" class="property-label">Character:</span> <span>{{$ctrl.vm.playerCharacter.name}}</span>
+	</div>
+	<div class="col-xs-4 bordered">
+		<span id="name-label" class="property-label">Species:</span> <span>{{$ctrl.vm.playerCharacter.species.toString()}}</span>
+	</div>
+</div>
+<div class="row row-eq-height">
+	<div class="col-xs-3 bordered">
+		<span id="name-label" class="property-label">Body:</span> <span>{{$ctrl.vm.playerCharacter.body}}</span>
+	</div>
+	<div class="col-xs-3 bordered">
+		<span id="name-label" class="property-label">Armour:</span> <span>{{$ctrl.vm.playerCharacter.armour}}</span>
+	</div>
+	<div class="col-xs-3 bordered">
+		<span id="name-label" class="property-label">Mana:</span> <span>{{$ctrl.vm.playerCharacter.mana}}</span>
+	</div>
+	<div class="col-xs-3 bordered">
+		<span id="name-label" class="property-label">XP:</span> <span>{{$ctrl.vm.playerCharacter.xp}}</span>
+	</div>
+</div>
+<div class="row row-eq-height">
+	<div class="col-xs-2 bordered">
+		<span id="name-label" class="property-label">Classes:</span>
+		<ul id="single">
+			<li ng-repeat="classes in $ctrl.vm.playerCharacter.classes"><a
+				ui-sref="classes.show({id: classes.id})">{{classes.toString()}}</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-xs-10 bordered">
+		<span id="name-label" class="property-label">Feat:</span>
+		<ul id="triple">
+			<li ng-repeat="characterFeat in $ctrl.vm.playerCharacter.feat"><a
+				ui-sref="characterFeat.show({id: characterFeat.id})">{{characterFeat.toString()}}</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="row row-eq-height">
+	<div class="col-xs-10 bordered">
+		<span id="name-label" class="property-label">Spells:</span>
+		<ul id="double">
+			<li ng-repeat="characterSpell in $ctrl.vm.playerCharacter.spell"><a
+				ui-sref="characterSpell.show({id: characterSpell.id})">
+					{{characterSpell.toString()}}</a> (Mana:
+				{{characterSpell.spell.level}})</li>
+		</ul>
+	</div>
+	<div class="col-xs-2 bordered">
+		<span id="name-label" class="property-label">Lores:</span>
+		<ul id="single">
+			<li ng-repeat="lore in $ctrl.vm.playerCharacter.lore"><a
+				ui-sref="lore.show({id: lore.id})">{{lore.toString()}}</a></li>
+		</ul>
+	</div>
+</div>

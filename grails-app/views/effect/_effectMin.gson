@@ -1,0 +1,10 @@
+import eblana.character.Effect
+
+model {
+	Effect effect
+}
+
+json {
+	id effect.id
+	effect effect.toString()
+	}

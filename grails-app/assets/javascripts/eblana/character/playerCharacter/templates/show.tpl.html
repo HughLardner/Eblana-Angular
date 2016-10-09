@@ -1,142 +1,21 @@
 <div class="nav" role="navigation">
-    <ul>
-        <li><a ui-sref="index" class="home">Home</a></li>
-        <li><a class="list" ui-sref="playerCharacter.list" class="list">PlayerCharacter List</a></li>
-        <li><a class="create" ui-sref="playerCharacter.create" class="create">New PlayerCharacter</a></li>
-    </ul>
+	<ul>
+		<li><a ui-sref="index" class="home">Home</a></li>
+		<li><a class="list" ui-sref="playerCharacter.list" class="list">PlayerCharacter
+				List</a></li>
+		<li><a class="create" ui-sref="playerCharacter.create"
+			class="create">New PlayerCharacter</a></li>
+	</ul>
 </div>
 <div id="show-part" class="content scaffold-show" role="main">
-    <h1>Show PlayerCharacter</h1>
-    <ol class="property-list playerCharacter">
-  <li class="fieldcontain">
-    <span id="spell-label" class="property-label">Spell</span>
-    <div class="property-value" aria-labelledby="spell-label">
-      <ul>
-        <li ng-repeat="characterSpell in vm.playerCharacter.spell">
-          <a ui-sref="characterSpell.show({id: characterSpell.id})">{{characterSpell.toString()}}</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="item-label" class="property-label">Item</span>
-    <div class="property-value" aria-labelledby="item-label">
-      <ul>
-        <li ng-repeat="item in vm.playerCharacter.item">
-          <a ui-sref="item.show({id: item.id})">{{item.toString()}}</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="alive-label" class="property-label">Alive</span>
-    <div class="property-value" aria-labelledby="alive-label">
-      <span>{{vm.playerCharacter.alive}}</span>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="lore-label" class="property-label">Lore</span>
-    <div class="property-value" aria-labelledby="lore-label">
-      <ul>
-        <li ng-repeat="lore in vm.playerCharacter.lore">
-          <a ui-sref="lore.show({id: lore.id})">{{lore.toString()}}</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="level-label" class="property-label">Level</span>
-    <div class="property-value" aria-labelledby="level-label">
-      <span>{{vm.playerCharacter.level}}</span>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="classes-label" class="property-label">Classes</span>
-    <div class="property-value" aria-labelledby="classes-label">
-      <ul>
-        <li ng-repeat="classes in vm.playerCharacter.classes">
-          <a ui-sref="classes.show({id: classes.id})">{{classes.toString()}}</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="recipe-label" class="property-label">Recipe</span>
-    <div class="property-value" aria-labelledby="recipe-label">
-      <ul>
-        <li ng-repeat="recipe in vm.playerCharacter.recipe">
-          <a ui-sref="recipe.show({id: recipe.id})">{{recipe.toString()}}</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="settlement-label" class="property-label">Settlement</span>
-    <div class="property-value" aria-labelledby="settlement-label">
-      <a ui-sref="settlement.show({id: vm.playerCharacter.settlement.id})">{{vm.playerCharacter.settlement.toString()}}</a>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="downtime-label" class="property-label">Downtime</span>
-    <div class="property-value" aria-labelledby="downtime-label">
-      <ul>
-        <li ng-repeat="downtime in vm.playerCharacter.downtime">
-          <a ui-sref="downtime.show({id: downtime.id})">{{downtime.toString()}}</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="species-label" class="property-label">Species</span>
-    <div class="property-value" aria-labelledby="species-label">
-      <a ui-sref="species.show({id: vm.playerCharacter.species.id})">{{vm.playerCharacter.species.toString()}}</a>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="background-label" class="property-label">Background</span>
-    <div class="property-value" aria-labelledby="background-label">
-      <span>{{vm.playerCharacter.background}}</span>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="name-label" class="property-label">Name</span>
-    <div class="property-value" aria-labelledby="name-label">
-      <span>{{vm.playerCharacter.name}}</span>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="feat-label" class="property-label">Feat</span>
-    <div class="property-value" aria-labelledby="feat-label">
-      <ul>
-        <li ng-repeat="characterFeat in vm.playerCharacter.feat">
-          <a ui-sref="characterFeat.show({id: characterFeat.id})">{{characterFeat.toString()}}</a>
-        </li>
-      </ul>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="user-label" class="property-label">User</span>
-    <div class="property-value" aria-labelledby="user-label">
-      <a ui-sref="secUser.show({id: vm.playerCharacter.user.id})">{{vm.playerCharacter.user.toString()}}</a>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="god-label" class="property-label">God</span>
-    <div class="property-value" aria-labelledby="god-label">
-      <a ui-sref="god.show({id: vm.playerCharacter.god.id})">{{vm.playerCharacter.god.toString()}}</a>
-    </div>
-  </li>
-  <li class="fieldcontain">
-    <span id="group-label" class="property-label">Group</span>
-    <div class="property-value" aria-labelledby="group-label">
-      <a ui-sref="group.show({id: vm.playerCharacter.group.id})">{{vm.playerCharacter.group.toString()}}</a>
-    </div>
-  </li>
-</ol>
-    <form ng-submit="vm.delete()">
-        <fieldset class="buttons">
-            <a class="edit" ui-sref="playerCharacter.edit({id: vm.playerCharacter.id})">Edit</a>
-            <input class="delete" type="submit" value="Delete" onclick="return confirm('Are you sure?');" />
-        </fieldset>
-    </form>
+	<h1>Show PlayerCharacter</h1>
+	<player-character vm="vm"></player-character>
+	<form ng-submit="vm.delete()">
+		<fieldset class="buttons">
+			<a class="edit"
+				ui-sref="playerCharacter.edit({id: vm.playerCharacter.id})">Edit</a>
+			<input class="delete" type="submit" value="Delete"
+				onclick="return confirm('Are you sure?');" />
+		</fieldset>
+	</form>
 </div>
