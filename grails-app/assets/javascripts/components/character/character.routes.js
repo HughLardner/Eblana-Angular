@@ -19,7 +19,7 @@
       {
         state: 'character',
         config: {
-          url: '/',
+          url: '/character/:id',
           templateUrl:  'assets/components/character/character.view.html',
           controller:   'CharacterController',
           controllerAs: 'CharacterController',

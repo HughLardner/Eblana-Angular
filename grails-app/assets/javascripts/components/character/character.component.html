@@ -48,7 +48,7 @@
 		<ul id="double">
 			<li ng-repeat="characterSpell in vm.character.spell"><a
 				ui-sref="characterSpell.show({id: characterSpell.id})">
-					{{characterSpell.toString()}}</a> (Mana:
+					{{characterSpell.spell.name}} {{characterSpell.effect1.effect}} {{characterSpell.effect2.effect}}</a> (Mana:
 				{{characterSpell.spell.level}})</li>
 		</ul>
 	</div>
