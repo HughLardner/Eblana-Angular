@@ -1,13 +1,13 @@
 
 <div class="row row-eq-height">
 	<div class="col-xs-4 bordered">
-		<span id="name-label" class="property-label">Player:</span> <span>{{vm.character.user.toString()}}</span>
+		<span id="name-label" class="property-label">Player:</span> <span>{{vm.character.user.name}}</span>
 	</div>
 	<div class="col-xs-4 bordered">
 		<span id="name-label" class="property-label">Character:</span> <span>{{vm.character.name}}</span>
 	</div>
 	<div class="col-xs-4 bordered">
-		<span id="name-label" class="property-label">Species:</span> <span>{{vm.character.species.toString()}}</span>
+		<span id="name-label" class="property-label">Species:</span> <span>{{vm.character.species.name}}</span>
 	</div>
 </div>
 <div class="row row-eq-height">
@@ -29,7 +29,7 @@
 		<span id="name-label" class="property-label">Classes:</span>
 		<ul id="single">
 			<li ng-repeat="classes in vm.character.classes"><a
-				ui-sref="classes.show({id: classes.id})">{{classes.toString()}}</a>
+				ui-sref="classes.show({id: classes.id})">{{classes.name}} {{classes.level}}</a>
 			</li>
 		</ul>
 	</div>
@@ -37,7 +37,7 @@
 		<span id="name-label" class="property-label">Feat:</span>
 		<ul id="triple">
 			<li ng-repeat="characterFeat in vm.character.feat"><a
-				ui-sref="characterFeat.show({id: characterFeat.id})">{{characterFeat.toString()}}</a>
+				ui-sref="characterFeat.show({id: characterFeat.id})">{{characterFeat.feat.name}} {{characterFeat.effect.name}}</a>
 			</li>
 		</ul>
 	</div>
@@ -56,7 +56,7 @@
 		<span id="name-label" class="property-label">Lores:</span>
 		<ul id="single">
 			<li ng-repeat="lore in vm.character.lore"><a
-				ui-sref="lore.show({id: lore.id})">{{lore.toString()}}</a></li>
+				ui-sref="lore.show({id: lore.id})">{{lore.name}}</a></li>
 		</ul>
 	</div>
 </div>

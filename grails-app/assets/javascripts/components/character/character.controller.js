@@ -1,40 +1,23 @@
-(function (projectName, angular) {
+(function(projectName, angular) {
 
-  'use strict';
+	'use strict';
 
-  angular
-    .module('app.components.character')
-    .controller('CharacterController', CharacterController);
-
-  CharacterController.$inject = ['$interval', 'logger', '$http'];
-  function CharacterController($interval, logger, $http) {
-
-    var vm = this;
-
-    logger.info('Loading controller:', vm);
-    
-    $http({
-    	  method: 'GET',
-    	  url: '/playerCharacter/58'
-    	}).then(function successCallback(response) {
-    	    vm.character = response.data
-    	  }, function errorCallback(response) {
-    	    // called asynchronously if an error occurs
-    	    // or server returns response with an error status.
-    	  });
-console.log(vm)
-  }
+	angular.module('app.components.character', [ 'ngResource' ])
+		.factory('CharacterService', [ '$resource', function($resource) {
+				return $resource('/playerCharacter/:id')
+		}])
+		.controller('CharacterController', ['logger', 'CharacterService', function(logger, CharacterService) {
+				var vm = this;				
+				vm.character = CharacterService.get({id : vm.id});
+				logger.info('Loading controller:', vm);
+		}])
+		.component("playerCharacter", {
+			templateUrl : "assets/components/character/character.view.html",
+			controller : 'CharacterController',
+			controllerAs : 'vm',
+			bindings : {
+				id : '<',
+			}
+		});
 
 })(window.projectName = window.projectName || {}, angular);
-
-
-angular
-.module("app.components.character")
-.component("playerCharacter", {   	  
-    templateUrl: "assets/components/character/character.view.html",
-    controller:   'CharacterController',
-    controllerAs: 'vm',
-    bindings:{
-    	id:'<',
-    }
-});
