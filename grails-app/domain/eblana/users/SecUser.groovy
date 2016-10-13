@@ -1,11 +1,13 @@
 package eblana.users
 
 import eblana.character.PlayerCharacter
+import grails.rest.Resource
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 
 @EqualsAndHashCode(includes='username')
 @ToString(includes='username', includeNames=true, includePackage=false)
+@Resource(readOnly = false, formats = ['json', 'xml'])
 class SecUser implements Serializable {
 
 	private static final long serialVersionUID = 1

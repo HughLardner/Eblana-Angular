@@ -1,0 +1,84 @@
+
+<div class="row row-eq-height bordered avoid-break">
+	<div class="col-xs-2 bordered">
+		<h5>Goal:</h5>
+	</div>
+	<div class="col-xs-10">
+		<p ng-bind-html="vm.downtime.goal"></p>
+	</div>
+</div>
+<div class="row row-eq-height bordered avoid-break">
+	<div class="col-xs-2 bordered">
+		<h5>Research:</h5>
+	</div>
+	<div class="col-xs-10">
+		<p ng-bind-html="vm.downtime.research"></p>
+	</div>
+</div>
+<div class="row row-eq-height bordered avoid-break">
+	<div class="col-xs-2 bordered">
+		<h5>Research Method:</h5>
+	</div>
+	<div class="col-xs-10">
+		<p ng-bind-html="vm.downtime.researchMethod"></p>
+	</div>
+</div>
+<div class="row row-eq-height bordered avoid-break">
+	<div class="col-xs-2 bordered">
+		<h5>Research Resources: </h5>
+	</div>
+	<div class="col-xs-10">
+		<p ng-bind-html="vm.downtime.researchResources"></p>
+	</div>
+</div>
+<div class="row row-eq-height bordered avoid-break">
+	<div class="col-xs-2 bordered">
+		<h5>Research Results:</h5>
+	</div>
+	<div class="col-xs-10">
+		<p ng-bind-html="vm.downtime.finalDecision"></p>
+</div>
+	</div>
+
+
+<g:render template="/downtime/resources" model="['instance': instance]" />
+
+<div class="item-downtime">
+	<h2>Items</h2>
+	<div class="row">
+			<div ng-repeat="item in vm.downtime.item | orderBy:'id'">
+				<item id="item.id"></item>
+			</div>
+	</div>
+</div>
+
+<div>
+	<g:if test="${instance?.to.size() >0 || instance?.from.size() >0}">
+		<h2>Transfers</h2>
+		<table
+			class="table table-striped table-hover table-bordered table-condensed">
+			<tr>
+				<th>From</th>
+				<th>To</th>
+				<th class="air">Air</th>
+				<th class="earth">Earth</th>
+				<th class="fire">Fire</th>
+				<th class="water">Water</th>
+				<th class="blended">Blended</th>
+				<th class="void">Void</th>
+				<th>Items</th>
+			</tr>
+			<g:each in="${instance?.to}" var="to">
+				<g:render template="/transfer/show"
+					model="['instance': to, 'event':event]" />
+			</g:each>
+			<g:each in="${instance?.from}" var="from">
+				<g:render template="/transfer/show"
+					model="['instance': from, 'event':event]" />
+			</g:each>
+		</table>
+	</g:if>
+</div>
+
+<button ng-click="vm.back()">Back</button>
+<button ng-click="vm.next()">Next</button>

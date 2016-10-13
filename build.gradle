@@ -11,6 +11,7 @@ buildscript {
 		classpath "org.grails.plugins:hibernate5:6.0.0"
 		classpath "org.grails.plugins:views-gradle:1.1.0"
 		classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.11.1"
+		classpath "gradle.plugin.com.craigburke.gradle:bower-installer-gradle:2.5.1"
 	}
 }
 
@@ -26,6 +27,7 @@ apply plugin:"com.craigburke.karma"
 apply plugin:"com.craigburke.client-dependencies"
 apply plugin:"org.grails.plugins.views-json"
 apply plugin:"asset-pipeline"
+apply plugin:"com.craigburke.bower-installer"
 
 repositories {
 	mavenLocal()
@@ -119,6 +121,9 @@ clientDependencies {
 		'angular-touch'( '1.4.x', into: 'angular') {
 			include 'angular-touch.js'
 		}
+		'jquery'('3.x.x', into:'jquery'){
+			
+		}
 	}
 }
 
@@ -141,3 +146,8 @@ assets {
 	minifyJs = true
 	minifyCss = true
 }
+
+bower {	
+	'ng-fi-text'('x.x.x')
+}
+

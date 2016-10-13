@@ -27,7 +27,7 @@
 
       // 3rd party
       'ui.router',
-
+      'ng-fi-text',
       // internal functions (exception logger)
       'internals',
 

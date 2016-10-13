@@ -19,9 +19,9 @@
     <div id="main">
 		<div ui-view></div>
     </div>
-    
 	<!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <asset:javascript src="/jquery/jquery.js" />
     <asset:javascript src="/app.module.js" />
     <asset:javascript src="/angular/angular-animate.js"/>
     <asset:javascript src="/angular/angular-aria.js"/>
@@ -32,6 +32,7 @@
    	<asset:javascript src="/angular/angular-sanitize.js"/>
     <asset:javascript src="/angular/angular-touch.js"/>
     <asset:javascript src="/angular/angular-ui-router.js"/>
+    <asset:javascript src="/ng-fi-text/ng-fi-text.js"/>
     
     <!-- Internals -->
     <asset:javascript src="/core/internals/internals.module.js"/>
@@ -68,9 +69,21 @@
     <asset:javascript src="/components/welcome/welcome.module.js"/>
     <asset:javascript src="/components/welcome/welcome.routes.js"/>
     <asset:javascript src="/components/welcome/welcome.controller.js"/>
-    
+    <!-- Character -->
     <asset:javascript src="/components/character/character.module.js"/>
     <asset:javascript src="/components/character/character.routes.js"/>
     <asset:javascript src="/components/character/character.controller.js"/>
+    <!-- User -->
+    <asset:javascript src="/components/user/user.module.js"/>
+    <asset:javascript src="/components/user/user.routes.js"/>
+    <asset:javascript src="/components/user/user.controller.js"/>
+    <!-- Downtime -->
+    <asset:javascript src="/components/downtime/downtime.module.js"/>
+    <asset:javascript src="/components/downtime/downtime.routes.js"/>
+    <asset:javascript src="/components/downtime/downtime.controller.js"/>
+    <!-- Item -->
+    <asset:javascript src="/components/item/item.module.js"/>
+    <asset:javascript src="/components/item/item.routes.js"/>
+    <asset:javascript src="/components/item/item.controller.js"/>
 </body>
 </html>

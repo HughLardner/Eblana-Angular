@@ -1,0 +1,18 @@
+<div class="col-xs-3">
+	<div class="image">
+		<img class="item__image" alt="" src="assets/bg1.png" />
+		<div id="item">
+			<p class="image__content item__header">Academy of Eblana</p>
+			<div class="image__content item__name">{{vm.item.name}}</div>
+			<div  ng-fi-text ng-fi-text-html="{{ vm.item.power1 }}<br/>{{vm.item.power2}}<br/>
+				Attunes to: {{vm.item.slot}}" class="image__content item__power">
+			</div>
+			<div class="image__content item__attunementTime">Attunement
+				Time: {{vm.item.attunementTime}}</div>
+			<div class="image__content item__duration">Valid Until End:
+				{{vm.item.duration}}</div>
+			<div class="image__content item__type">Type: {{vm.item.type}}</div>
+			<div class="image__content item__id">Item ID : {{vm.item.id}}</div>
+		</div>
+	</div>
+</div>

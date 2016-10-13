@@ -12,7 +12,10 @@
   angular
     .module('app.components', [
       'app.components.welcome',
-      'app.components.character'
+      'app.components.character', 
+      'app.components.user',
+      'app.components.downtime',
+      'app.components.item'
     ]);
 
 })(window.projectName = window.projectName || {}, angular);

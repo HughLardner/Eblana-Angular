@@ -28,7 +28,7 @@
 	<div class="col-xs-2 bordered">
 		<span id="name-label" class="property-label">Classes:</span>
 		<ul id="single">
-			<li ng-repeat="classes in vm.character.classes"><a
+			<li ng-repeat="classes in vm.character.classes | orderBy:'id'"><a
 				ui-sref="classes.show({id: classes.id})">{{classes.name}} {{classes.level}}</a>
 			</li>
 		</ul>
@@ -36,7 +36,7 @@
 	<div class="col-xs-10 bordered">
 		<span id="name-label" class="property-label">Feat:</span>
 		<ul id="triple">
-			<li ng-repeat="characterFeat in vm.character.feat"><a
+			<li ng-repeat="characterFeat in vm.character.feat | orderBy:'feat.name'"><a
 				ui-sref="characterFeat.show({id: characterFeat.id})">{{characterFeat.feat.name}} {{characterFeat.effect.name}}</a>
 			</li>
 		</ul>
@@ -46,7 +46,7 @@
 	<div class="col-xs-10 bordered">
 		<span id="name-label" class="property-label">Spells:</span>
 		<ul id="double">
-			<li ng-repeat="characterSpell in vm.character.spell"><a
+			<li ng-repeat="characterSpell in vm.character.spell| orderBy:'spell.level'"><a
 				ui-sref="characterSpell.show({id: characterSpell.id})">
 					{{characterSpell.spell.name}} {{characterSpell.effect1.effect}} {{characterSpell.effect2.effect}}</a> (Mana:
 				{{characterSpell.spell.level}})</li>
@@ -55,8 +55,10 @@
 	<div class="col-xs-2 bordered">
 		<span id="name-label" class="property-label">Lores:</span>
 		<ul id="single">
-			<li ng-repeat="lore in vm.character.lore"><a
+			<li ng-repeat="lore in vm.character.lore | orderBy:'name'"><a
 				ui-sref="lore.show({id: lore.id})">{{lore.name}}</a></li>
 		</ul>
 	</div>
 </div>
+<button ng-click="vm.back()">Back</button>
+<button ng-click="vm.next()">Next</button>
