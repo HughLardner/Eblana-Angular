@@ -1,7 +1,0 @@
-import eblana.background.Group
-
-model {
-	Group group
-}
-
-json tmpl.group(group)

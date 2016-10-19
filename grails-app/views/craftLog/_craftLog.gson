@@ -1,7 +1,0 @@
-import eblana.event.CraftLog
-
-model {
-	CraftLog craftLog
-}
-
-json g.render(craftLog)

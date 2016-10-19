@@ -5,6 +5,8 @@
  *  @description
  *  It exposes application component
  */
+
+
 (function (projectName, angular) {
 
   'use strict';
@@ -15,7 +17,9 @@
       'app.components.character', 
       'app.components.user',
       'app.components.downtime',
-      'app.components.item'
+      'app.components.item',
+      'app.components.minor',
+      'app.components.recipe'
     ]);
 
 })(window.projectName = window.projectName || {}, angular);

@@ -1,7 +1,0 @@
-import eblana.character.Species
-
-model {
-	Species species
-}
-
-json tmpl.species(species)

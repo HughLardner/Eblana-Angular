@@ -1,7 +1,0 @@
-import eblana.character.CharacterSpell
-
-model {
-	CharacterSpell characterSpell
-}
-
-json tmpl.characterSpell(characterSpell)

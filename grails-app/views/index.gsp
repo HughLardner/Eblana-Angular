@@ -33,6 +33,7 @@
     <asset:javascript src="/angular/angular-touch.js"/>
     <asset:javascript src="/angular/angular-ui-router.js"/>
     <asset:javascript src="/ng-fi-text/ng-fi-text.js"/>
+    <asset:javascript src="/angular-smart-table/smart-table.js"/>
     
     <!-- Internals -->
     <asset:javascript src="/core/internals/internals.module.js"/>
@@ -69,6 +70,9 @@
     <asset:javascript src="/components/welcome/welcome.module.js"/>
     <asset:javascript src="/components/welcome/welcome.routes.js"/>
     <asset:javascript src="/components/welcome/welcome.controller.js"/>
+    <!-- Minor -->
+    <asset:javascript src="/components/minor/minor.module.js"/>
+    <asset:javascript src="/components/minor/minor.controller.js"/>
     <!-- Character -->
     <asset:javascript src="/components/character/character.module.js"/>
     <asset:javascript src="/components/character/character.routes.js"/>
@@ -85,5 +89,8 @@
     <asset:javascript src="/components/item/item.module.js"/>
     <asset:javascript src="/components/item/item.routes.js"/>
     <asset:javascript src="/components/item/item.controller.js"/>
+    <!-- Item -->
+    <asset:javascript src="/components/recipe/recipe.module.js"/>
+    <asset:javascript src="/components/recipe/recipe.controller.js"/>
 </body>
 </html>

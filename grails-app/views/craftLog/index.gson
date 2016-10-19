@@ -1,8 +1,0 @@
-import eblana.event.CraftLog
-
-model {
-	Iterable<CraftLog> craftLogList
-}
-
-json tmpl.craftLog(craftLogList ?: [])
-

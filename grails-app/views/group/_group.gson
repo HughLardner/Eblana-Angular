@@ -1,7 +1,0 @@
-import eblana.background.Group
-
-model {
-	Group group
-}
-
-json g.render(group)

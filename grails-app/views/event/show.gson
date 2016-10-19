@@ -1,7 +1,0 @@
-import eblana.event.Event
-
-model {
-	Event event
-}
-
-json tmpl.event(event)

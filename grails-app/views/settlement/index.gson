@@ -1,8 +1,0 @@
-import eblana.background.Settlement
-
-model {
-	Iterable<Settlement> settlementList
-}
-
-json tmpl.settlement(settlementList ?: [])
-

@@ -1,7 +1,0 @@
-import eblana.character.Species
-
-model {
-	Species species
-}
-
-json g.render(species)

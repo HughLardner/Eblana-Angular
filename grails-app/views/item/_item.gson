@@ -4,4 +4,6 @@ model {
 	Item item
 }
 
-json g.render(item)
+json g.render(item, [excludes:['convertedCrystalCost','internalNotes','status','curseCure']]){
+	power item.power1 + (item.power2?'<br/>'+item.power2:'') + '<br/>Attunes to: ' +item.slot
+}

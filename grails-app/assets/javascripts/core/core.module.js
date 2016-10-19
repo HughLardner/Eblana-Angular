@@ -28,6 +28,7 @@
       // 3rd party
       'ui.router',
       'ng-fi-text',
+      'smart-table',
       // internal functions (exception logger)
       'internals',
 

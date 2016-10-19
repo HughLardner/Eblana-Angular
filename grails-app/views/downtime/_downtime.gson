@@ -4,4 +4,20 @@ model {
 	Downtime downtime
 }
 
-json g.render(downtime)
+json g.render(downtime){
+	to tmpl.'../transferLog/transferLog'(downtime.to)
+	from tmpl.'../transferLog/transferLog'(downtime.from)
+	airCrystals downtime.airCurrent
+	earthCrystals downtime.earthCurrent
+	fireCrystals downtime.fireCurrent
+	waterCrystals downtime.waterCurrent
+	blendedCrystals downtime.blendedCurrent
+	voidCrystals downtime.voidCurrent
+	event {
+		id downtime.event.id
+		name downtime.event.toString()
+		number downtime.event.eventNumber
+	}
+}
+
+

@@ -1,7 +1,0 @@
-import eblana.logistic.Note
-
-model {
-	Note note
-}
-
-json tmpl.note(note)

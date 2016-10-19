@@ -1,8 +1,0 @@
-import eblana.users.SecRole
-
-model {
-	Iterable<SecRole> secRoleList
-}
-
-json tmpl.secRole(secRoleList ?: [])
-

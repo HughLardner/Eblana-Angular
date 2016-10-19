@@ -1,8 +1,0 @@
-import eblana.items.ItemType
-
-model {
-	Iterable<ItemType> itemTypeList
-}
-
-json tmpl.itemType(itemTypeList ?: [])
-

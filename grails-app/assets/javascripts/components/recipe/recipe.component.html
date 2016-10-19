@@ -1,0 +1,42 @@
+
+<table st-table="recipeDisplay" st-safe-src="vm.recipe"
+	class="table  table-striped table-hover table-bordered table-condensed recipe">
+	<thead>
+	<tr>
+		<th st-sort="feat">Feat</th>
+		<th st-sort="itemType">Item Type</th>
+		<th st-sort="power1">Power</th>
+		<th st-sort="attunementTime">Attune</th>
+		<th>Total Cost</th>
+		<th st-sort="any">Any</th>
+		<th st-sort="blended" class="blended">B</th>
+		<th st-sort="air" class="air">A</th>
+		<th st-sort="earth" class="earth">E</th>
+		<th st-sort="fire" class="fire">F</th>
+		<th st-sort="water" class="water">W</th>
+		<th st-sort="void" class="void">V</th>
+	</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="recipe in recipeDisplay">
+			<td>{{recipe.feat}}</td>
+			<td>{{recipe.itemType}}</td>
+			<td>{{recipe.power1}}</br> {{recipe.power2}}
+			</td>
+			<td>{{recipe.attunementTime}}</td>
+			<td>{{recipe.anyCrystal + recipe.blended +
+				recipe.air + recipe.earth +
+				recipe.fire + recipe.water +
+				recipe.void}}</td>
+			<td>{{recipe.any}}</td>
+			<td class="blended">{{recipe.blended}}</td>
+			<td class="air">{{recipe.air}}</td>
+			<td class="earth">{{recipe.earth}}</td>
+			<td class="fire">{{recipe.fire}}</td>
+			<td class="water">{{recipe.water}}</td>
+			<td class="void">{{recipe.void}}</td>
+		</tr>
+	</tbody>
+</table>
+<button ng-click="vm.back()">Back</button>
+<button ng-click="vm.next()">Next</button>

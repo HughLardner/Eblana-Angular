@@ -13,7 +13,7 @@ class CharacterFeat {
 	static belongsTo = [character : PlayerCharacter]
 	
 	String toString(){
-		return feat
+		return feat.toString() + (effect?' <'+effect+'>':'')
 	}
 	
 	static mapping = {

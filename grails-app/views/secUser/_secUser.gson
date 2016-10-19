@@ -4,4 +4,4 @@ model {
 	SecUser secUser
 }
 
-json g.render(secUser)
+json g.render(secUser,[excludes:['password']])

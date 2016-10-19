@@ -1,4 +1,5 @@
 
+<h3>{{vm.downtime.event.name}}</h3>
 <div class="row row-eq-height bordered avoid-break">
 	<div class="col-xs-2 bordered">
 		<h5>Goal:</h5>
@@ -25,7 +26,7 @@
 </div>
 <div class="row row-eq-height bordered avoid-break">
 	<div class="col-xs-2 bordered">
-		<h5>Research Resources: </h5>
+		<h5>Research Resources:</h5>
 	</div>
 	<div class="col-xs-10">
 		<p ng-bind-html="vm.downtime.researchResources"></p>
@@ -37,47 +38,54 @@
 	</div>
 	<div class="col-xs-10">
 		<p ng-bind-html="vm.downtime.finalDecision"></p>
-</div>
 	</div>
+</div>
 
-
-<g:render template="/downtime/resources" model="['instance': instance]" />
+<resource air="vm.downtime.airCrystals"
+	earth="vm.downtime.earthCrystals" fire="vm.downtime.fireCrystals"
+	water="vm.downtime.waterCrystals" blended="vm.downtime.blendedCrystals"
+	void="vm.downtime.voidCrystals"></resource>
 
 <div class="item-downtime">
 	<h2>Items</h2>
 	<div class="row">
-			<div ng-repeat="item in vm.downtime.item | orderBy:'id'">
-				<item id="item.id"></item>
-			</div>
+		<div ng-repeat="item in vm.downtime.item | orderBy:'id'">
+			<item id="item.id"></item>
+		</div>
 	</div>
 </div>
 
 <div>
-	<g:if test="${instance?.to.size() >0 || instance?.from.size() >0}">
-		<h2>Transfers</h2>
-		<table
-			class="table table-striped table-hover table-bordered table-condensed">
-			<tr>
-				<th>From</th>
-				<th>To</th>
-				<th class="air">Air</th>
-				<th class="earth">Earth</th>
-				<th class="fire">Fire</th>
-				<th class="water">Water</th>
-				<th class="blended">Blended</th>
-				<th class="void">Void</th>
-				<th>Items</th>
-			</tr>
-			<g:each in="${instance?.to}" var="to">
-				<g:render template="/transfer/show"
-					model="['instance': to, 'event':event]" />
-			</g:each>
-			<g:each in="${instance?.from}" var="from">
-				<g:render template="/transfer/show"
-					model="['instance': from, 'event':event]" />
-			</g:each>
-		</table>
-	</g:if>
+	<h2>Transfers</h2>
+	<table
+		class="table table-striped table-hover table-bordered table-condensed">
+		<tr>
+			<th>From</th>
+			<th>To</th>
+			<th class="air">Air</th>
+			<th class="earth">Earth</th>
+			<th class="fire">Fire</th>
+			<th class="water">Water</th>
+			<th class="blended">Blended</th>
+			<th class="void">Void</th>
+			<th>Items</th>
+		</tr>
+		<tr
+			ng-repeat="transfer in vm.downtime.to.concat(vm.downtime.from) | orderBy:'id'">
+			<td>{{transfer.from.name }}</td>
+			<td>{{transfer.to.name }}</td>
+			<td class="air">{{transfer.air }}</td>
+			<td class="earth">{{transfer.earth }}</td>
+			<td class="fire">{{transfer.fire }}</td>
+			<td class="water">{{transfer.water }}</td>
+			<td class="blended">{{transfer.blended }}</td>
+			<td class="void">{{transfer.voidC }}</td>
+			<td>
+				<ul>
+					<li ng-repeat="item in transfer.item">{{item.name}}</li>
+			</td>
+		</tr>
+	</table>
 </div>
 
 <button ng-click="vm.back()">Back</button>

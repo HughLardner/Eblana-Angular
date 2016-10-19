@@ -1,7 +1,0 @@
-import eblana.character.Lore
-
-model {
-	Lore lore
-}
-
-json g.render(lore)

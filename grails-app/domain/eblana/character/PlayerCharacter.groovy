@@ -11,7 +11,6 @@ import eblana.items.Recipe
 import eblana.users.SecUser
 import grails.rest.*
 
-
 class PlayerCharacter {
 	String name
 	Species species

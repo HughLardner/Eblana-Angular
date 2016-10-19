@@ -1,8 +1,0 @@
-import eblana.character.Species
-
-model {
-	Iterable<Species> speciesList
-}
-
-json tmpl.species(speciesList ?: [])
-

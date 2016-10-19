@@ -5,18 +5,64 @@ model {
 }
 
 json {
-	hal.links(playerCharacter)
-	id playerCharacter.id
-	user tmpl.'../secUser/secUserMin'(secUser:playerCharacter.user)
-	name playerCharacter.name
-	species tmpl.'../species/species'(playerCharacter.species)
-	body playerCharacter.body
-	armour playerCharacter.armour
-	mana playerCharacter.mana
-	xp playerCharacter.xp
-	classes tmpl.'../classes/classes'(playerCharacter.classes)
-	feat tmpl.'../characterFeat/characterFeat'(playerCharacter.feat)
-	spell tmpl.'../characterSpell/characterSpell'(playerCharacter.spell)
-	lore tmpl.'../lore/lore'(playerCharacter.lore)
-	alive playerCharacter.alive
+	id playerCharacter?.id
+	user{
+		id playerCharacter?.user?.id
+		name playerCharacter?.user?.toString()
+	}
+	name playerCharacter?.name
+	species {
+		id playerCharacter?.species?.id
+		name playerCharacter?.species?.name
+	}
+	body playerCharacter?.body
+	armour playerCharacter?.armour
+	mana playerCharacter?.mana
+	xp playerCharacter?.xp
+	classes playerCharacter?.classes?.collect{
+		[
+		id:it?.id,
+		name:it?.toString()
+		]
+	}
+	feat playerCharacter?.feat?.collect{
+		[
+		id: it?.id,
+		name: it?.toString(),
+		feat: [
+			id: it?.feat?.id,
+			name: it?.feat?.toString()
+			],
+		effect: [
+			id: it?.effect?.id,
+			name: it?.effect?.toString()
+			]
+		]
+	}
+	spell playerCharacter?.spell?.collect{
+		[
+		id:it?.id,
+		name:it?.toString(),
+		spell:[
+			id: it?.spell?.id,
+			name: it?.spell?.toString(),
+			level: it?.spell?.classes?.level
+			],
+		effect1: [
+			id: it?.effect1?.id,
+			name: it?.effect1?.toString()
+			],
+		effect2: [
+			id: it?.effect2?.id,
+			name: it?.effect2?.toString()
+			]
+		]
+	}
+	lore playerCharacter?.lore?.collect{
+		[
+		id:it?.id,
+		name:it?.toString()
+		]
+	}
+	alive playerCharacter?.alive
 }

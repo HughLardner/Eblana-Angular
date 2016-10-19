@@ -149,5 +149,6 @@ assets {
 
 bower {	
 	'ng-fi-text'('x.x.x')
+	'angular-smart-table'('x.x.x')
 }
 

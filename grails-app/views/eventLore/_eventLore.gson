@@ -1,7 +1,0 @@
-import eblana.event.EventLore
-
-model {
-	EventLore eventLore
-}
-
-json g.render(eventLore)

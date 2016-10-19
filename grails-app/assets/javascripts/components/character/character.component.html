@@ -37,7 +37,7 @@
 		<span id="name-label" class="property-label">Feat:</span>
 		<ul id="triple">
 			<li ng-repeat="characterFeat in vm.character.feat | orderBy:'feat.name'"><a
-				ui-sref="characterFeat.show({id: characterFeat.id})">{{characterFeat.feat.name}} {{characterFeat.effect.name}}</a>
+				ui-sref="characterFeat.show({id: characterFeat.id})">{{characterFeat.name}}</a>
 			</li>
 		</ul>
 	</div>
@@ -48,7 +48,7 @@
 		<ul id="double">
 			<li ng-repeat="characterSpell in vm.character.spell| orderBy:'spell.level'"><a
 				ui-sref="characterSpell.show({id: characterSpell.id})">
-					{{characterSpell.spell.name}} {{characterSpell.effect1.effect}} {{characterSpell.effect2.effect}}</a> (Mana:
+					{{characterSpell.name}}</a> (Mana:
 				{{characterSpell.spell.level}})</li>
 		</ul>
 	</div>

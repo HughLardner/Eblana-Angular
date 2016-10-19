@@ -1,7 +1,0 @@
-import eblana.items.ItemType
-
-model {
-	ItemType itemType
-}
-
-json tmpl.itemType(itemType)

@@ -1,7 +1,0 @@
-import eblana.items.Recipe
-
-model {
-	Recipe recipe
-}
-
-json tmpl.recipe(recipe)

@@ -1,7 +1,0 @@
-import eblana.character.CharacterFeat
-
-model {
-	CharacterFeat characterFeat
-}
-
-json tmpl.characterFeat(characterFeat)

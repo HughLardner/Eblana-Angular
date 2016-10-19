@@ -4,4 +4,18 @@ model {
 	TransferLog transferLog
 }
 
-json g.render(transferLog)
+json g.render(transferLog){
+	to {
+		id transferLog.to.character.id
+		name transferLog.to.character.toString()
+	}
+	from {
+		id transferLog.from.character.id
+		name transferLog.from.character.toString()
+	}
+	item transferLog.item.collect{
+		[id : it.id,
+		name : it.name
+		]
+	}
+}

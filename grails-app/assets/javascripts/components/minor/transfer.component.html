@@ -1,0 +1,18 @@
+
+	<td>{{$ctrl.transfer.from.character }}</td>
+	<td>{{$ctrl.transfer.to.character }}</td>
+	<td class="air">{{$ctrl.transfer.air }}</td>
+	<td class="earth">{{$ctrl.transfer.earth }}</td>
+	<td class="fire">{{$ctrl.transfer.fire }}</td>
+	<td class="water">{{$ctrl.transfer.water }}</td>
+	<td class="blended">{{$ctrl.transfer.blended }}</td>
+	<td class="void">{{$ctrl.transfer.voidC }}</td>
+	<td>
+		<ul>
+			<g:each in="${instance.item}" var="i">
+				<li><g:link controller="Item" action="show" id="${i.id}">
+						${i.name?i.name:i.toString()}
+					</g:link></li>
+			</g:each>
+		</ul>
+	</td>

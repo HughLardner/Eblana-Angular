@@ -1,8 +1,0 @@
-import eblana.background.God
-
-model {
-	Iterable<God> godList
-}
-
-json tmpl.god(godList ?: [])
-

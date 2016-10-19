@@ -1,7 +1,0 @@
-import eblana.background.God
-
-model {
-	God god
-}
-
-json g.render(god)

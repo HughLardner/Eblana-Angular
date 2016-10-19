@@ -1,8 +1,0 @@
-import eblana.character.Lore
-
-model {
-	Iterable<Lore> loreList
-}
-
-json tmpl.lore(loreList ?: [])
-
